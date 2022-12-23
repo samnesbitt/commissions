@@ -1,6 +1,6 @@
 const form = document.querySelector('form');
-const resultElement = document.querySelector('#result');
 const hourlyRate = 17;
+const resultElement = document.querySelector('#result');
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -26,5 +26,8 @@ form.addEventListener('submit', (event) => {
 
   const commission = commissionRate * netRevenue;
 
-  resultElement.innerHTML = `The commission is: $${commission.toFixed(2)}`;
+  resultElement.innerHTML = `
+    <p>Net Revenue: $${netRevenue.toFixed(2)}</p>
+    <p><strong>Commission: $${commission.toFixed(2)}</strong></p>
+  `;
 });
