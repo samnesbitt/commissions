@@ -1,0 +1,21 @@
+<form>
+  <label for="mrr">MRR:</label><br>
+  <input type="number" id="mrr" name="mrr"><br>
+  <label for="onboarding_fee">Onboarding Fee:</label><br>
+  <input type="number" id="onboarding_fee" name="onboarding_fee"><br>
+  <label for="monthly_hours">Monthly Hours:</label><br>
+  <input type="number" id="monthly_hours" name="monthly_hours"><br>
+  <label for="contract_length">Contract Length (in months):</label><br>
+  <input type="number" id="contract_length" name="contract_length"><br>
+  <label for="payment_terms">Payment Terms:</label><br>
+  <select id="payment_terms" name="payment_terms">
+    <option value="monthly">Monthly</option>
+    <option value="quarterly">Quarterly</option>
+    <option value="upfront">Upfront</option>
+  </select><br><br>
+  <button type="submit">Calculate Commission</button>
+</form> 
+
+<div id="result"></div>
+
+<script src="script.js"></script>
