@@ -14,6 +14,7 @@ form.addEventListener('submit', (event) => {
   const totalRevenue = parseInt(onboardingFee) + (parseInt(mrr) * (parseInt(contractLength) - 1));
   const totalCostOfHours = parseInt(monthlyHours) * hourlyRate * (parseInt(contractLength) - 1);
   const netRevenue = totalRevenue - totalCostOfHours;
+  const hourlyFee = parseInt(mrr) / parseInt(monthlyHours);
 
   let commissionRate;
   if (paymentTerms === 'monthly') {
@@ -27,6 +28,7 @@ form.addEventListener('submit', (event) => {
   const commission = commissionRate * netRevenue;
 
   resultElement.innerHTML = `
+    <p>Hourly Fee: $${hourlyFee.toFixed(2)}</p>
     <p>Net Revenue: $${netRevenue.toFixed(2)}</p>
     <p><strong>Commission: $${commission.toFixed(2)}</strong></p>
   `;
